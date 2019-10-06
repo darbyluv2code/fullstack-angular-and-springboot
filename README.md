@@ -6,5 +6,5 @@
 
 * [Mac](install-angular-tools/mac/install-mac.md)
 
-* [Linux](install-angular-tools/linux/install-install-linux.md)
+* [Linux](install-angular-tools/linux/install-linux.md)
 
