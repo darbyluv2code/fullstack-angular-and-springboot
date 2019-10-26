@@ -1,11 +1,4 @@
-@Configuration
-public class AppConfig {
-
-    @Bean({"dataSource", "subsystemA-dataSource", "subsystemB-dataSource"})
-    public DataSource dataSource() {
-        // instantiate, configure and return DataSource bean...
-    }
-}# Mac - Install Development Tools
+# Mac - Install Development Tools
 
 In this guide, we will install the following development tools
 
