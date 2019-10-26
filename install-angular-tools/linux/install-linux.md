@@ -19,7 +19,7 @@ Visual Studio Code is a general purpose IDE that support many programming langua
 
 1. In a web browser, visit https://code.visualstudio.com/
 
-2. Click the link to download Visual Studio Code for the Linux
+2. Click the link to download Visual Studio Code for Linux
 
 3. Follow the installation instructions for your Linux distribution.
 
@@ -158,4 +158,4 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
 That's it! You have successfully installed the development tools: Visual Studio Code, nvm, node, npm and tsc.
 
 ---
-Copyright 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
+&copy; 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.

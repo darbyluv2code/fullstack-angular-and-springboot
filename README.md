@@ -2,9 +2,8 @@
 
 ## Angular Installation Guides
 
-* [Microsoft Windows](install-angular-tools/ms-windows/install-ms-windows.md)
+* [Linux](install-angular-tools/linux/install-linux.md)
 
 * [Mac](install-angular-tools/mac/install-mac.md)
 
-* [Linux](install-angular-tools/linux/install-linux.md)
-
+* [Microsoft Windows](install-angular-tools/ms-windows/install-ms-windows.md)

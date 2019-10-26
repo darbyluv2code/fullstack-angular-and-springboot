@@ -11,8 +11,7 @@ In this guide, we will install the following development tools
 Visual Studio Code is a general purpose IDE that support many programming languages. Visual Studio Code has built-in support for TypeScript.
 
 1. In a web browser, visit https://code.visualstudio.com/
-
-2. Follow the link to download Visual Studio Code for the MS Windows
+2. Follow the link to download Visual Studio Code for MS Windows
 
 3. Run the Installer
 
@@ -32,9 +31,9 @@ In this course, we'll use Node to run applications that we develop using TypeScr
 
 4. Follow the steps in the Installer
 
-5. Open a Command-Prompt window to verify the node installation
+5. Open a **Command Prompt** window to verify the node installation
 
-6. In the command prompt window, type the following command: 
+6. In the **Command Prompt** window, type the following command: 
 
     ```bash
     node --version
@@ -59,21 +58,21 @@ In this course, we'll use Node to run applications that we develop using TypeScr
 ## Install tsc
 tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaScript code. We can install the TypeScript compile using the Node Package Manager (npm)
 
-1. In your Command Prompt window, enter the following command
+1. In your **Command Prompt** window, enter the following command
 
     ```
     npm install -g typescript
     ```
 
-   The "-g" installs this as a. global package. The TypeScript compiler will be available to all directories for this user.
+   The "-g" installs this as a global package. The TypeScript compiler will be available to all directories for this user.
 
    You will see something similar to
 
     ```
-    /Users/luv2code/.nvm/versions/node/v12.11.1/bin/tsc -> /Users/luv2code/.nvm/versions/node/v12.11.1/lib/node_modules/typescript/bin/tsc
-    /Users/luv2code/.nvm/versions/node/v12.11.1/bin/tsserver -> /Users/luv2code/.nvm/versions/node/v12.11.1/lib/node_modules/typescript/bin/tsserver
+    C:\Users\luv2code\AppData\Roaming\npm\tsserver -> C:\Users\luv2code\AppData\Roaming\npm\node_modules\typescript\bin\tsserver
+    C:\Users\luv2code\AppData\Roaming\npm\tsc -> C:\Users\luv2code\AppData\Roaming\npm\node_modules\typescript\bin\tsc
     + typescript@3.6.3
-    added 1 package from 1 contributor in 1.526s
+    added 1 package from 1 contributor in 3.188s
     ```
 
 2. You can verify the installation
@@ -88,4 +87,4 @@ That's it! You have successfully installed the development tools: Visual Studio 
 
 
 ---
-Copyright 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
+&copy; 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.

@@ -19,7 +19,7 @@ Visual Studio Code is a general purpose IDE that support many programming langua
 
 1. In a web browser, visit https://code.visualstudio.com/
 
-2. Follow the link to download Visual Studio Code for the Mac
+2. Follow the link to download Visual Studio Code for Mac
 
 3. Unzip the downloaded file
 
@@ -48,7 +48,7 @@ The website for nvm is: https://github.com/nvm-sh/nvm
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh | bash
     ```
 
-   The script clones the nvm repository to ~/.nvm and adds the source line to your profile (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc).
+   The script clones the nvm repository to `~/.nvm` and adds the source line to your profile: `~/.bashrc`.
 
    You will see output similar to the following:
 
@@ -74,7 +74,27 @@ The website for nvm is: https://github.com/nvm-sh/nvm
     source ~/.bashrc
     ```
 
-4. Verify the installation, by typing the following command:
+4. Update your `~/.bash_profile` file to reference your `~/.bashrc` file. Open the file in VS Code. 
+
+    > The `code` command will launch Visual Studio Code.
+
+    ```
+    code ~/.bash_profile
+    ```
+
+5. In Visual Studio Code, enter the following:
+
+    ```
+    if [ -r ~/.bashrc ]; then
+       source ~/.bashrc
+    fi
+    ```
+
+7. Save the file and exit Visual Studio Code.
+
+8. Move back to your terminal window.
+
+9. Verify the installation by typing the following command:
 
     ```bash
     nvm --version
@@ -82,7 +102,7 @@ The website for nvm is: https://github.com/nvm-sh/nvm
 
    If the installation is successful, you will see the version number.
 
-> For details on other nvm commands, use `nvm --help` or see the docs: https://github.com/nvm-sh/nvm
+    > For details on other nvm commands, use `nvm --help` or see the docs: https://github.com/nvm-sh/nvm
 
 
 ## Install Node
@@ -162,4 +182,4 @@ That's it! You have successfully installed the development tools: Visual Studio 
 
 
 ---
-Copyright 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
+&copy; 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
