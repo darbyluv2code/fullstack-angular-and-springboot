@@ -1,4 +1,11 @@
-# Mac - Install Development Tools
+@Configuration
+public class AppConfig {
+
+    @Bean({"dataSource", "subsystemA-dataSource", "subsystemB-dataSource"})
+    public DataSource dataSource() {
+        // instantiate, configure and return DataSource bean...
+    }
+}# Mac - Install Development Tools
 
 In this guide, we will install the following development tools
 
@@ -82,7 +89,9 @@ The website for nvm is: https://github.com/nvm-sh/nvm
     code ~/.bash_profile
     ```
 
-5. In Visual Studio Code, enter the following:
+5. Your `.bash_profile` file should now be open in Visual Studio Code.
+
+5. Add the following text to your `.bash_profile` file:
 
     ```
     if [ -r ~/.bashrc ]; then
@@ -90,7 +99,7 @@ The website for nvm is: https://github.com/nvm-sh/nvm
     fi
     ```
 
-7. Save the file and exit Visual Studio Code.
+7. Save your  `bash_profile` file and exit Visual Studio Code.
 
 8. Move back to your terminal window.
 
