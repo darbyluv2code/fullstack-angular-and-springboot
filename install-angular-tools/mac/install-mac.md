@@ -108,7 +108,7 @@ The website for nvm is: https://github.com/nvm-sh/nvm
 
 
 ## Install Node
-Node is the the runtime environment for executing JavaScript code from the command-line. By using Node, you can create any time of application using JavaScript including server-side / backend applications.
+Node is the the runtime environment for executing JavaScript code from the command-line. By using Node, you can create any type of application using JavaScript including server-side / backend applications.
 
 In this course, we'll use Node to run applications that we develop using TypeScript and Angular.
 
