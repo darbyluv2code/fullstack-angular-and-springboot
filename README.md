@@ -1,8 +1,7 @@
 # Full Stack: Angular and Spring Boot
 
-<a href="https://bit.ly/2C3XMcs">
-<img src="images/angular-spring-boot-grabber-thumbnail.png" alt="Full Stack: Angular and Spring Boot"  width="400" />
-</a>
+
+<img src="images/angular-spring-boot-grabber-thumbnail.png" alt="Full Stack: Angular and Spring Boot"  width="400" />](https://bit.ly/2C3XMcs)
 
 ## Angular Installation Guides
 
