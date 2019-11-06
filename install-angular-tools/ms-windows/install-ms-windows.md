@@ -101,7 +101,7 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
 
 2. You can resolve this issue with the following steps:
 
-    1. Run Visual Studio Code as administrator
+    1. Run Visual Studio Code as **Administrator**
 
     2. In the Terminal Window of Visual Studio Code, run `Set-ExecutionPolicy RemoteSigned` on PowerShell.
 
