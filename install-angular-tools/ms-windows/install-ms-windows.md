@@ -93,13 +93,9 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
     tsc : File C:\Users\johndoe\AppData\Roaming\npm\tsc.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 
     At line:1 char:1
-
     + tsc sample-datatypes.ts
-
     + ~~~
-
         + CategoryInfo          : SecurityError: (:) [], PSSecurityException
-
         + FullyQualifiedErrorId : UnauthorizedAccess
     ```
 
