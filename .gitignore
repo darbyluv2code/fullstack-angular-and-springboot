@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio
-# Edit at https://www.gitignore.io/?templates=node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio
+# Created by https://www.gitignore.io/api/node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio,visualstudiocode
 
 ### Angular ###
 ## Angular ##
@@ -701,4 +701,15 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+
+# End of https://www.gitignore.io/api/node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio,visualstudiocode
