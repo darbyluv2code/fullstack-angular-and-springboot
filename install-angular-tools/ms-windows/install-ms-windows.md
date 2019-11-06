@@ -83,6 +83,34 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
 
    If the installation is successful, you will see the version number.
 
+## Troubleshooting
+
+### Permissions Issue with tsc
+
+1. If you get the following error when executing tsc command using PowerShell:
+
+    ```bash
+    tsc : File C:\Users\johndoe\AppData\Roaming\npm\tsc.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+
+    At line:1 char:1
+
+    + tsc sample-datatypes.ts
+
+    + ~~~
+
+        + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+
+        + FullyQualifiedErrorId : UnauthorizedAccess
+    ```
+
+2. You can resolve this issue with the following steps:
+
+    1. Run Visual Studio Code as administrator
+
+    2. In the Terminal Window of Visual Studio Code, run `Set-ExecutionPolicy RemoteSigned` on PowerShell.
+
+> This troubleshooting tip was contributed by Fabio Gomes. Thanks Fabio!!
+
 That's it! You have successfully installed the development tools: Visual Studio Code, node, npm and tsc.
 
 
