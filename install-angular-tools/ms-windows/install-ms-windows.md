@@ -107,7 +107,7 @@ That's it! You have successfully installed the development tools: Visual Studio 
 
     2. In the Terminal Window of Visual Studio Code, run `Set-ExecutionPolicy RemoteSigned` on PowerShell.
 
-    *This troubleshooting tip was contributed by **Fabio Gomes**. Thanks Fabio!!*
+    *This troubleshooting tip was contributed by **Fabio Gomes Sakiyama**. Thanks Fabio!!*
 
 
 
