@@ -109,7 +109,19 @@ That's it! You have successfully installed the development tools: Visual Studio 
 
     *This troubleshooting tip was contributed by **Fabio Gomes Sakiyama**. Thanks Fabio!!*
 
+### Typescript: 'tsc' is not recognized as an internal or external command
 
+1. If you get the following error when executing tsc command:
+
+    ```bash
+    Typescript: 'tsc' is not recognized as an internal or external command
+    ```
+
+2. You can resolve this issue with the following:
+
+    1. Add the npm installation folder to your "user variables" AND "environment variables"
+
+    *This troubleshooting tip was contributed by **Chris**. Thanks Chris!!*
 
 ---
 &copy; 2019, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
