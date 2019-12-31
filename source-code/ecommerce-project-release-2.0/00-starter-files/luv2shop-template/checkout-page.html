@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<title>luv2shop - Full Stack eCommerce: Angular and Spring Boot</title>
+
+	<!-- Bootstrap CSS and Font Awesome -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" media="all">
+
+	<!-- Main CSS-->
+	<link href="styles.css" rel="stylesheet" media="all">
+
+	<link rel="icon" href="assets/images/fav-icon.png">
+</head>
+
+<body>
+	<div class="page-wrapper">
+
+		<!-- MENU SIDEBAR-->
+		<aside class="menu-sidebar d-none d-lg-block clr">
+			<div class="logo">
+				<a href="home.html">
+					<img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
+				</a>
+			</div>
+		</aside>
+		<!-- END MENU SIDEBAR-->
+
+		<!-- PAGE CONTAINER-->
+		<div class="page-new">
+			<!-- HEADER DESKTOP-->
+			<header class="header-desktop extra">
+				<div class="section-content section-content-p30">
+					<div class="container-fluid">
+						<div class="header-wrap">
+							<form class="form-header" onsubmit="return false;" method="GET">
+								<input class="au-input au-input-xl" type="text" name="search"
+									placeholder="Search for data ..." />
+								<button class="au-btn-submit" type="submit">
+									Search
+								</button>
+							</form>
+							<div class="cart-area d-n">
+								<a href="shopping-detail.html">
+									<div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart"
+										aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+						<div class="account-wrap"></div>
+					</div>
+				</div>
+			</header>
+			<!-- END HEADER DESKTOP-->
+
+			<!-- MAIN CONTENT-->
+			<div class="main-content page-m">
+				<div class="section-content section-content-p30 e-spc">
+					<div class="container-fluid">
+
+						<div class="form-area">
+							<h3>Customer</h3>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="input-space">
+										<input type="text" placeholder="First Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-space">
+										<input type="text" placeholder="Last Name">
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-md-6">
+									<div class="input-space">
+										<input type="text" placeholder="Email Address">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Form 2-->
+						<div class="form-area">
+							<h3>Shipping Address</h3>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="input-space">
+										<input type="text" placeholder="Street">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="input-space">
+										<input type="text" placeholder="City">
+									</div>
+								</div>
+
+								<div class="col-md-12">
+									<div class="input-space">
+										<select>
+											<option>State / Province</option>
+											<option></option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="input-space">
+										<input type="text" placeholder="Zip Code / Postal Code">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="input-space">
+							<label class="au-checkbox">
+								<input type="checkbox" checked="checked">
+								<span class="au-checkmark"></span> Bill Address same as Shipping Adress
+							</label>
+						</div>
+
+						<div class="form-area">
+							<h3>Credit Card</h3>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="input-space">
+										<select>
+											<option>Visa</option>
+											<option></option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="input-space">
+										<input type="text" placeholder="Name on card">
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-md-8">
+									<div class="input-space">
+										<input type="text" placeholder="Card number">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="input-space">
+										<input type="text" placeholder="CVV2 number">
+									</div>
+								</div>
+								<div class="clearfix"></div>
+
+								<div class="col-md-2"> <label class="date">Expiration Date</label></div>
+								<div class="col-md-5">
+									<div class="input-space">
+										<select>
+											<option>Month</option>
+											<option></option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<div class="input-space">
+										<select>
+											<option>Year</option>
+											<option></option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-area">
+							<h3>Review Your Order</h3>
+							<b>Total Quantity: 2</b>
+							<h4>Shipping: FREE</h4>
+							<B>Total Price: $19.99</B>
+						</div>
+						<div class="text-center">
+							<button class="btn btn-info">Purchase</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- END PAGE CONTAINER-->
+
+</body>
+
+</html>
+<!-- end document-->
