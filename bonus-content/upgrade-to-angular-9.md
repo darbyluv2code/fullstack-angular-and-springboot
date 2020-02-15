@@ -92,7 +92,7 @@ Detailed steps below.
     ...
 ```
 
-3. You can also verify the Angular version by viewing the package.json file. Recall that the `package.json` file is similar to the Maven `pom.xml` file.
+3. You can also verify the Angular version by viewing the `package.json` file. Recall that the `package.json` file is similar to the Maven `pom.xml` file.
 
 4. In your text editor, view the file: `package.json`
 
