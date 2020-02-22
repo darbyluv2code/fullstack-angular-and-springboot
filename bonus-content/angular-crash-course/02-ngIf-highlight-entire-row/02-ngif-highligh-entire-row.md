@@ -53,7 +53,7 @@ File: **sales-person-list.component.html**
 
 Also, remove the `table-hover` style from your `<table ...>` tag. This will prevent the rows from changing colors when you hover over them.
 
-The final code for [sales-person-list.component.html](code/sales-person-list.component.html) should resemble the one below:
+The final code for [sales-person-list-bootstrap.component.html](code/sales-person-list-bootstrap.component.html) should resemble the one below:
 
 ```html
 <table class="table">
