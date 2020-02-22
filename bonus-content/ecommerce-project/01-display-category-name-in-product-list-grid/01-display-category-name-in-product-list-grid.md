@@ -32,7 +32,7 @@ Replace
 
 With
 ```ts
-    {path: 'category/:id/:name', component: ProductListComponent},
+  {path: 'category/:id/:name', component: ProductListComponent},
 ```
 
 This adds a new `name` parameter to the route. Later on, our code will construct routes using the parameter values.
