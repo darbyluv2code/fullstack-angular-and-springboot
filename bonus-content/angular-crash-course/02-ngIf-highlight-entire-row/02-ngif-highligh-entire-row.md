@@ -36,7 +36,7 @@ The basic syntax is:
 
 In our example, we will use the `[ngClass]`. This will give a red background for the entire row for a sales person whose `quota is >= 60000`.
 
-File: **sales-person-list.component.html**
+File: **sales-person-list-bootstrap.component.html**
 ```html
         <tr *ngFor="let tempSalesPerson of salesPersonList" [ngClass]="{'highlight': tempSalesPerson.salesVolume >= 60000}">
             <td>{{ tempSalesPerson.firstName }}</td>
