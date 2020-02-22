@@ -237,6 +237,7 @@ The final code for [product-list-grid.component.html](code/product-list-grid.com
 </div>
 
 ---
+## Verify the Results
 
 Now when you run our application, you will see the category name at the top of the list grid.
 
