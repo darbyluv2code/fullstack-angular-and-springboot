@@ -12,7 +12,12 @@ Good question! Yes, we can develop code to accomplish this task.
 
 ----
 
-Here are the steps.
+## Development Process
+1. Create a local CSS style for Green
+2. Update HTML to apply style to row
+
+---
+### 1. Create a local CSS style for Green
 
 In the CSS file for your component, you can create a local CSS style. This is setting the background color of an element to green.
 
@@ -23,6 +28,8 @@ File: **sales-person-list.component.css**
       background-color:green
     }
 ```
+
+### 2. Update HTML to apply style to row
 
 In your component, you can make use of `[ngClass]` to conditionally apply styles to an element.
 
