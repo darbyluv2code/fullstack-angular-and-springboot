@@ -52,8 +52,12 @@ export class CheckoutComponent implements OnInit {
 
     if (event.target.checked) {
       this.checkoutFormGroup.controls.billingAddress
-          .setValue(this.checkoutFormGroup.controls.shippingAddress.value);
+            .setValue(this.checkoutFormGroup.controls.shippingAddress.value);
     }
+    else {
+      this.checkoutFormGroup.controls.billingAddress.reset();
+    }
+    
   }
 
   onSubmit() {
