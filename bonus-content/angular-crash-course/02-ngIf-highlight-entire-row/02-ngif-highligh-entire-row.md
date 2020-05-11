@@ -41,7 +41,7 @@ The basic syntax is:
     }">
 ```
 
-In our example, we will use the `[ngClass]`. This will give a red background for the entire row for a sales person whose `quota is >= 60000`.
+In our example, we will use the `[ngClass]`. This will give a green background for the entire row for a sales person whose `quota is >= 60000`.
 
 File: **sales-person-list-bootstrap.component.html**
 ```html
