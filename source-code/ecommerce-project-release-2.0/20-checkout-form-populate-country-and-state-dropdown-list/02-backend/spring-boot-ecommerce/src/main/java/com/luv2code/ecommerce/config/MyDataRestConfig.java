@@ -26,24 +26,25 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         entityManager = theEntityManager;
     }
 
+
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
 
         HttpMethod[] theUnsupportedActions = {HttpMethod.PUT, HttpMethod.POST, HttpMethod.DELETE};
 
-        // disable HTTP methods for Product: PUT, POST and DELETE
-        disableMethods(Product.class, config, theUnsupportedActions);
-        disableMethods(ProductCategory.class, config, theUnsupportedActions);
-        disableMethods(Country.class, config, theUnsupportedActions);
-        disableMethods(State.class, config, theUnsupportedActions);
+        // disable HTTP methods for ProductCategory: PUT, POST and DELETE
+        disableHttpMethods(Product.class, config, theUnsupportedActions);
+        disableHttpMethods(ProductCategory.class, config, theUnsupportedActions);
+        disableHttpMethods(Country.class, config, theUnsupportedActions);
+        disableHttpMethods(State.class, config, theUnsupportedActions);
 
         // call an internal helper method
         exposeIds(config);
     }
 
-    private void disableMethods(Class theEntityClass, RepositoryRestConfiguration config, HttpMethod[] theUnsupportedActions) {
+    private void disableHttpMethods(Class theClass, RepositoryRestConfiguration config, HttpMethod[] theUnsupportedActions) {
         config.getExposureConfiguration()
-                .forDomainType(theEntityClass)
+                .forDomainType(theClass)
                 .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions))
                 .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedActions));
     }

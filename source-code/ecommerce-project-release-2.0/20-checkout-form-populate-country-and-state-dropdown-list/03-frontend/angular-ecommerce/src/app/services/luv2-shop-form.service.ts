@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Country } from '../common/country';
 import { HttpClient } from '@angular/common/http';
+import { Country } from '../common/country';
 import { map } from 'rxjs/operators';
 import { State } from '../common/state';
 
@@ -11,7 +11,7 @@ import { State } from '../common/state';
 export class Luv2ShopFormService {
 
   private countriesUrl = 'http://localhost:8080/api/countries';
-  private statesUrl = 'http://localhost:8080/api/states/';
+  private statesUrl = 'http://localhost:8080/api/states';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class Luv2ShopFormService {
   }
 
   getStates(theCountryCode: string): Observable<State[]> {
-    
+
     // search url
     const searchStatesUrl = `${this.statesUrl}/search/findByCountryCode?code=${theCountryCode}`;
 
@@ -31,6 +31,7 @@ export class Luv2ShopFormService {
       map(response => response._embedded.states)
     );
   }
+
 
   getCreditCardMonths(startMonth: number): Observable<number[]> {
 
