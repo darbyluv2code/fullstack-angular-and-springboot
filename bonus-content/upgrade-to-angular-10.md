@@ -56,20 +56,8 @@ Detailed steps below.
 ```bash
     Using package manager: 'npm'
     Collecting installed dependencies...
-    Found 32 dependencies.
-    Fetching dependency metadata from registry...
-    Package '@angular/cli' is already up to date.
-        Updating package.json with dependency @angular/core @ "9.0.0" (was "8.2.14")...
-        Updating package.json with dependency @angular/compiler-cli @ "9.0.0" (was "8.2.14")...
-        Updating package.json with dependency @angular/language-service @ "9.0.0" (was "8.2.14")...
-        Updating package.json with dependency @angular/animations @ "9.0.0" (was "8.2.14")...
-        Updating package.json with dependency @angular/common @ "9.0.0" (was "8.2.14")...
-        Updating package.json with dependency @angular/compiler @ "9.0.0" (was "8.2.14")...
-        Updating package.json with dependency @angular/forms @ "9.0.0" (was "8.2.14")...
     ...
 ```
-
- **_(note your version numbers may vary)_**
 
 3. Eventually, you will see the message below letting you know the update is complete.
 
@@ -88,27 +76,7 @@ Detailed steps below.
 2. In the output, make note of the following line _(note your version numbers may vary)_:
 ```bash
     ...
-        Angular: 9.0.0
-    ...
-```
-
-3. You can also verify the Angular version by viewing the `package.json` file. Recall that the `package.json` file is similar to the Maven `pom.xml` file.
-
-4. In your text editor, view the file: `package.json`
-
-5. Make note of the dependencies section 
-
-```bash
-    ...
-    "dependencies": {
-        "@angular/animations": "~9.0.0",
-        "@angular/common": "~9.0.0",
-        "@angular/compiler": "~9.0.0",
-        "@angular/core": "~9.0.0",
-        "@angular/forms": "~9.0.0",
-        "@angular/platform-browser": "~9.0.0",
-        "@angular/platform-browser-dynamic": "~9.0.0",
-        "@angular/router": "~9.0.0",
+        Angular: 10.0.3
     ...
 ```
 
@@ -128,12 +96,12 @@ A: No, the ecommerce project does not have any deprecated code for Angular 10. T
 
 Q: **_Where can I find information on all new features in Angular 10?_**
 
-A: You can view the blog post: [_version 10 of Angular Now Available Project Ivy has arrived_](https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3)  
+A: You can view the blog post: [_version 10 of Angular Now Available_](https://blog.angular.io/version-10-of-angular-now-available-78960babd41)  
 &nbsp;
 
 Q: **_Where can I find details on the update/migration process?_**
 
-A: See the Angular documentation: [Updating to version 10](https://angular.io/guide/updating-to-version-9)  
+A: See the Angular documentation: [Updating to version 10](https://update.angular.io/)  
 &nbsp;
 
 
