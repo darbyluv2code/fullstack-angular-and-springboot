@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Luv2ShopFormService } from 'src/app/services/luv2-shop-form.service';
 import { Country } from 'src/app/common/country';
 import { State } from 'src/app/common/state';
+import { City } from 'src/app/common/city';
 
 @Component({
   selector: 'app-checkout',
@@ -24,6 +25,8 @@ export class CheckoutComponent implements OnInit {
   shippingAddressStates: State[] = [];
   billingAddressStates: State[] = [];
   
+  shippingAddressCities: City[] = [];
+  billingAddressCities: City[] = [];
   
   constructor(private formBuilder: FormBuilder,
               private luv2ShopFormService: Luv2ShopFormService) { }
@@ -97,15 +100,16 @@ export class CheckoutComponent implements OnInit {
       this.checkoutFormGroup.controls.billingAddress
             .setValue(this.checkoutFormGroup.controls.shippingAddress.value);
 
-      // bug fix for states
-      this.billingAddressStates = this.shippingAddressStates;
-
+            // bug fix for states and cities
+            this.billingAddressStates = this.shippingAddressStates;
+            this.billingAddressCities = this.shippingAddressCities;
     }
     else {
       this.checkoutFormGroup.controls.billingAddress.reset();
 
-      // bug fix for states
+      // bug fix for states and cities
       this.billingAddressStates = [];
+      this.billingAddressCities = [];
     }
     
   }
@@ -171,5 +175,31 @@ export class CheckoutComponent implements OnInit {
       }
     );
   }
-}
 
+
+  getCities(formGroupName: string) {
+
+    const formGroup = this.checkoutFormGroup.get(formGroupName);
+
+    const stateId = formGroup.value.state.id;
+    const stateName = formGroup.value.state.name;
+
+    console.log(`${formGroupName} state id: ${stateId}`);
+    console.log(`${formGroupName} state name: ${stateName}`);
+
+    this.luv2ShopFormService.getCities(stateId).subscribe(
+      data => {
+
+        if (formGroupName === 'shippingAddress') {
+          this.shippingAddressCities = data; 
+        }
+        else {
+          this.billingAddressCities = data;
+        }
+
+        // select first item by default
+        formGroup.get('city').setValue(data[0]);
+      }
+    );
+  }
+}
