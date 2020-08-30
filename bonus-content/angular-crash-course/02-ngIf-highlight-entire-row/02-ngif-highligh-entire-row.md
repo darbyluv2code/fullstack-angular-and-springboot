@@ -76,7 +76,7 @@ The final code for [sales-person-list-bootstrap.component.html](code/sales-perso
     </thead>
 
     <tbody>
-        <tr *ngFor="let tempSalesPerson of salesPersonList" [ngClass]="{'highlight': tempSalesPerson.salesVolume >= 60000}">
+        <tr *ngFor="let tempSalesPerson of salesPersonList" [ngClass]="{highlight: tempSalesPerson.salesVolume >= 60000}">
             <td>{{ tempSalesPerson.firstName }}</td>
             <td>{{ tempSalesPerson.lastName }}</td>
             <td>{{ tempSalesPerson.email }}</td>
