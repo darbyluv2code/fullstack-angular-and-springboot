@@ -9,7 +9,7 @@ import { OrderHistoryService } from '../../services/order-history.service';
 })
 export class OrderHistoryComponent implements OnInit {
 
-  orderHistory: OrderHistory[] = [];
+  orderHistoryList: OrderHistory[] = [];
   storage: Storage = sessionStorage;
 
   constructor(private orderHistoryService: OrderHistoryService) { }
@@ -19,16 +19,16 @@ export class OrderHistoryComponent implements OnInit {
   }
 
   handleOrderHistory() {
+
     // read the user's email address from browser storage
     const theEmail = JSON.parse(this.storage.getItem('userEmail'));
 
-    this.orderHistoryService.getOrderHistory(theEmail).subscribe(this.processResult());
-  }
-
-  processResult() {
-    return data => {
-      this.orderHistory = data._embedded.orders;
-    }
+    // retrieve data from the service
+    this.orderHistoryService.getOrderHistory(theEmail).subscribe(
+      data => {
+        this.orderHistoryList = data._embedded.orders;
+      }
+    );
   }
 
 }

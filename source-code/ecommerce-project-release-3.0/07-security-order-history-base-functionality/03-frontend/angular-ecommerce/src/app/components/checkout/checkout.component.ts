@@ -43,7 +43,7 @@ export class CheckoutComponent implements OnInit {
     
     this.reviewCartDetails();
 
-    // read the user's email address from browser storage    
+    // read the user's email address from browser storage
     const theEmail = JSON.parse(this.storage.getItem('userEmail'));
 
     this.checkoutFormGroup = this.formBuilder.group({
