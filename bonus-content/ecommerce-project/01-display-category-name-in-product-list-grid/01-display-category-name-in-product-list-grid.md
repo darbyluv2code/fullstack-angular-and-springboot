@@ -47,7 +47,7 @@ Replace
 ```
 With
 ```html
-          <a routerLink="/category/{‌{ tempProductCategory.id }}/{‌{ tempProductCategory.categoryName }}" routerLinkActive="active-link">
+          <a routerLink="/category/{{ tempProductCategory.id }}/{{ tempProductCategory.categoryName }}" routerLinkActive="active-link">
 ```
 
 This adds another parameter, `name`, for the category name.
@@ -63,7 +63,7 @@ The final code for [product-category-menu.component.html](code/product-category-
             <li *ngFor="let tempProductCategory of productCategories">
 
                 <a routerLink="/category/{{ tempProductCategory.id }}/{{ tempProductCategory.categoryName }}" routerLinkActive="active-link">
-                    {{ tempProductCategory.categoryName }}
+                  {{ tempProductCategory.categoryName }}
                 </a>
                 
             </li>
