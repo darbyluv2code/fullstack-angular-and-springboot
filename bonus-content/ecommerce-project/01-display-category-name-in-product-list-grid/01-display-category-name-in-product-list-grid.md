@@ -17,7 +17,7 @@ One approach we can take is to update the menu component. We can pass the catego
 Here is the development process
 
 1. Update route and add parameter
-2. Update routeLink to include the category name
+2. Update routerLink to include the category name
 3. Update component to read the category name
 4. Update the list-grid HTML file to bind to category name
 
@@ -43,7 +43,7 @@ Edit the file: **product-category-menu.component.html**
 
 Replace
 ```html
-          <a routerLink="/category/{‌{ tempProductCategory.id }}" routerLinkActive="active-link">
+          <a routerLink="/category/{{ tempProductCategory.id }}" routerLinkActive="active-link">
 ```
 With
 ```html
