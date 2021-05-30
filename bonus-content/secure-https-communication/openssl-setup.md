@@ -76,7 +76,13 @@ Let's verify the OpenSSL installation
     mkdir ssl-localhost
     ```
 
-4. Create a configuration file for the OpenSSL utility. Open a text editor and enter the following:
+4. Create a configuration file for the OpenSSL utility. 
+
+    a. In the directory: `angular-ecommerce`
+    
+    b. Create a new file named: `localhost.conf`
+
+4. Open the `localhost.conf` file and enter the following:
     ```
     [req]
     # Don't prompt the user when running openssl certificate generation
@@ -99,9 +105,9 @@ Let's verify the OpenSSL installation
     CN = localhost
     ```
 
-5. Save the file as: `localhost.conf` in the directory: `angular-ecommerce`.
+5. Save the file.
 
-6. Run this command to generate the key and certificate.
+6. In the terminal window, run this command to generate the key and certificate.
 
     ```
     openssl req -x509 \
@@ -200,7 +206,13 @@ On Mac/Linux, openssl is already included with the operating system. There is no
     mkdir ssl-localhost
     ```
 
-4. Create a configuration file for the OpenSSL utility. Open a text editor and enter the following:
+4. Create a configuration file for the OpenSSL utility. 
+
+    a. In the directory: `angular-ecommerce`
+    
+    b. Create a new file named: `localhost.conf`
+
+4. Open the `localhost.conf` file and enter the following:
     ```
     [req]
     # Don't prompt the user when running openssl certificate generation
@@ -223,9 +235,9 @@ On Mac/Linux, openssl is already included with the operating system. There is no
     CN = localhost
     ```
 
-5. Save the file as: `localhost.conf` in the directory: `angular-ecommerce`.
+5. Save the file.
 
-6. Run this command to generate the key and certificate.
+6. In the terminal window, run this command to generate the key and certificate.
 
     ```
     openssl req -x509 \
