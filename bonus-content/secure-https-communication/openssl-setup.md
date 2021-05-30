@@ -162,7 +162,7 @@ Let's verify the OpenSSL installation
     ```    
     Certificate:
         Data:
-            Version: 3 (0x2)
+            Version: ...
             Serial Number: 13535095018565170476 (0xbbd6513516bc752c)
         Signature Algorithm: sha256WithRSAEncryption
             Issuer: C=US, ST=Pennsylvania, L=Philadelphia, O=luv2code, OU=Training, CN=localhost
@@ -290,7 +290,7 @@ On Mac/Linux, openssl is already included with the operating system. There is no
     ```    
     Certificate:
         Data:
-            Version: 3 (0x2)
+            Version: ...
             Serial Number: 13535095018565170476 (0xbbd6513516bc752c)
         Signature Algorithm: sha256WithRSAEncryption
             Issuer: C=US, ST=Pennsylvania, L=Philadelphia, O=luv2code, OU=Training, CN=localhost
