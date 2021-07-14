@@ -1,4 +1,4 @@
-# Keytool Setup - Generate key and self-signed certificate
+# Keytool - Generate key and self-signed certificate
 
 This document includes instructions for generating a key and self-signed certificate using [Keytool](https://docs.oracle.com/en/java/javase/13/docs/specs/man/keytool.html). 
 
