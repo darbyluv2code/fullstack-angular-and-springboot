@@ -2,7 +2,7 @@
 
 This document includes instructions for generating a key and self-signed certificate using [Keytool](https://docs.oracle.com/en/java/javase/13/docs/specs/man/keytool.html). 
 
-> :ballot_box_with_check: Keytool is already installed with the Java Development Kit. No additional installed is required.
+> :ballot_box_with_check: NOTE: Keytool is already installed with the Java Development Kit. No additional installed is required.
 
 ## Generate Key and Self-Signed Certificate
 
