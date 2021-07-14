@@ -78,5 +78,37 @@ This document includes instructions for generating a key and self-signed certifi
     ]
     ```
 
-Congrats! You have successfully generated a key and self-signed certificate. You can now return to the videos and continue with the course.
+## Spring Boot HTTPS configs
+
+1. Edit your `application.properties` file
+
+1. Add this snippet for Spring Boot SSL configs to the end of your `application.properties` file
+
+    ```
+    #####
+    #
+    # HTTPS configuration
+    #
+    #####
+
+    # Server web port
+    server.port=8443
+
+    # Enable HTTPS support (only accept HTTPS requests)
+    server.ssl.enabled=true
+
+    # Alias that identifies the key in the key store
+    server.ssl.key-alias=luv2code
+
+    # Keystore location
+    server.ssl.key-store=classpath:luv2code-keystore.p12
+
+    # Keystore password
+    server.ssl.key-store-password=secret
+
+    # Keystore format
+    server.ssl.key-store-type=PKCS12
+    ```
+
+Congrats! You have successfully configured your Spring Boot project to use a self-signed certificate for https. You can now return to the videos and continue with the course.
 
