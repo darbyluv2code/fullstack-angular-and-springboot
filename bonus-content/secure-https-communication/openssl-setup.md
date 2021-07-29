@@ -40,7 +40,7 @@ For MS Windows, you need to install OpenSSL
 
     d. In the **System variables** section, select the **Path** variable and click the **Edit** button.
 
-    e. At the beginning of the path, add: `c:\Program Files\OpenSSL-Win64;`
+    e. At the beginning of the path, add: `c:\Program Files\OpenSSL-Win64\bin;`
 
     > **_NOTE:_** Be sure to update with the installation directory on your computer accordingly.
 
