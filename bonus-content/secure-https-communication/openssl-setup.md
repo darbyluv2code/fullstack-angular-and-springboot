@@ -107,14 +107,10 @@ Let's verify the OpenSSL installation
 
 5. Save the file.
 
-6. In the terminal window, run this command to generate the key and certificate.
+6. In the terminal window, run this command to generate the key and certificate. _Be sure to enter this command as a single line._
 
     ```
-    openssl req -x509 \
-      -out ssl-localhost/localhost.crt \
-      -keyout ssl-localhost/localhost.key \
-      -newkey rsa:2048 -nodes -sha256 -days 365 \
-      -config localhost.conf
+    openssl req -x509 -out ssl-localhost\localhost.crt -keyout ssl-localhost\localhost.key -newkey rsa:2048 -nodes -sha256 -days 365 -config localhost.conf
     ```
 
     | Argument | Description |
