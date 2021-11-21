@@ -11,6 +11,6 @@
 
 * [Microsoft Windows](install-angular-tools/ms-windows/install-ms-windows.md)
 
-## Source Code-
+## Source Code
 
 * [Source code](source-code)
