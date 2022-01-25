@@ -200,7 +200,7 @@ With
     <div class="main-content">
         <div class="section-content section-content-p30">
      
-            <h4>Category: {‌{ currentCategoryName }}</h4>
+            <h4>Category: {‌{ this.currentCategoryName }}</h4>
             <hr>
      
             <div class="container-fluid">
@@ -214,7 +214,7 @@ The final code for [product-list-grid.component.html](code/product-list-grid.com
 <div class="main-content">
     <div class="section-content section-content-p30">
 
-        <h4>Category: {{ currentCategoryName }}</h4>
+        <h4>Category: {{ this.currentCategoryName }}</h4>
         <hr>
 
         <div class="container-fluid">
