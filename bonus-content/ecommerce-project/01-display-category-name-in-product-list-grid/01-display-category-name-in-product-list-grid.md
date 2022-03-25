@@ -127,7 +127,7 @@ With
 
 If no category is provided, this code defaults to category id of 1 and name of "Books"
 
-The final code for [product-list-grid.component.ts](code/product-list-grid.component.ts) should resemble the one below:
+The final code for [product-list.component.ts](code/product-list-grid.component.ts) should resemble the one below:
 
 ```ts
 import { Component, OnInit } from '@angular/core';
