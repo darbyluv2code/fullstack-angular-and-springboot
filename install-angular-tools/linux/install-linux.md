@@ -44,7 +44,7 @@ The website for nvm is: https://github.com/nvm-sh/nvm
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh | bash
     ```
 
-   The script clones the nvm repository to ~/.nvm and adds the source line to your profile (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc).
+   The script clones the nvm repository to \~/.nvm and adds the source line to your profile (\~/.bash_profile, \~/.zshrc, \~/.profile, or \~/.bashrc).
 
    You will see output similar to the following:
 
