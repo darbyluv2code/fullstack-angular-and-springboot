@@ -133,10 +133,10 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
 1. In you terminal window, enter the following command
 
     ```
-    npm install -g typescript
+    npm install --location=global typescript
     ```
 
-   The `-g` installs this as a global package. The TypeScript compiler will be available to all directories for this user.
+   The `--location=global` installs this as a global package. The TypeScript compiler will be available to all directories for this user.
 
    You will see something similar to
 
