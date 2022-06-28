@@ -95,13 +95,13 @@ In this course, we'll use Node to run applications that we develop using TypeScr
    You will see the following output
 
     ```
-    Downloading and installing node v12.11.1...
-    Downloading https://nodejs.org/dist/v12.11.1/node-v12.11.1-darwin-x64.tar.gz...
+    Downloading and installing node v18.4.0...
+    Downloading https://nodejs.org/dist/v18.4.0/node-v18.4.0-...
     ######################################################################## 100.0%
     Computing checksum with shasum -a 256
     Checksums matched!
-    Now using node v12.11.1 (npm v6.11.3)
-    Creating default alias: default -> node (-> v12.11.1)
+    Now using node v18.4.0 (npm v8.12.1)
+    Creating default alias: default -> node (-> v18.4.0)
     ```
 
 2. Verify the node installation
@@ -126,26 +126,29 @@ In this course, we'll use Node to run applications that we develop using TypeScr
    >
    > In this example, node is similar to the Java JDK.  And npm is similar to Maven.
 
+## Angular Versions
+
+> Note: This course has been tested with Node 16.10. We will install this version.
+
+1. Install and use Node 16.10
+
+    ```bash
+    nvm install 16.10.0
+    nvm use 16.10.0
+    ```
 
 ## Install tsc
-tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaScript code. We can install the TypeScript compile using the Node Package Manager (npm)
+tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaScript code. We can install the TypeScript compiler using the Node Package Manager (npm)
 
-1. In you terminal window, enter the following command
+> Note: This course has been tested with TypeScript 4.6. We will install this version.
+
+1. In your terminal window, enter the following command
 
     ```
-    npm install --location=global typescript
+    npm install --location=global typescript@4.6.4
     ```
 
    The `--location=global` installs this as a global package. The TypeScript compiler will be available to all directories for this user.
-
-   You will see something similar to
-
-    ```
-    /Users/luv2code/.nvm/versions/node/v12.11.1/bin/tsc -> /Users/luv2code/.nvm/versions/node/v12.11.1/lib/node_modules/typescript/bin/tsc
-    /Users/luv2code/.nvm/versions/node/v12.11.1/bin/tsserver -> /Users/luv2code/.nvm/versions/node/v12.11.1/lib/node_modules/typescript/bin/tsserver
-    + typescript@3.6.3
-    added 1 package from 1 contributor in 1.526s
-    ```
 
 2. You can verify the installation
 
@@ -158,4 +161,4 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
 That's it! You have successfully installed the development tools: Visual Studio Code, nvm, node, npm and tsc.
 
 ---
-&copy; 2021, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
+&copy; 2022, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
