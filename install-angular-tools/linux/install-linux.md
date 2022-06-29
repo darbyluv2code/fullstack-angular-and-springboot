@@ -4,9 +4,22 @@ In this guide, we will install the following development tools
 
 * Visual Studio Code
 * nvm
-* node
 * npm
+* node
 * tsc
+
+## Versions
+
+This course has been tested with the following software versions:
+
+* nvm 0.35.0
+* npm 7.24.0
+* node 16.10.0
+* tsc 4.6.4
+* Angular 14
+* Spring Boot 2.7.1 
+
+It is **highly recommended** that you use the versions listed above to make sure you do not encounter any issues with the course. If you choose to use other versions then the code may not work as expected.
 
 ## Prerequisites
 * git: You must have the git command-line tool installed. 
@@ -126,7 +139,7 @@ In this course, we'll use Node to run applications that we develop using TypeScr
    >
    > In this example, node is similar to the Java JDK.  And npm is similar to Maven.
 
-## Angular Versions
+## Switch Node Versions
 
 > Note: This course has been tested with Node 16.10. We will install this version.
 
