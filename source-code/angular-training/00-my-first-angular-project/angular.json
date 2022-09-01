@@ -5,11 +5,7 @@
   "projects": {
     "my-first-angular-project": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -101,6 +97,5 @@
         }
       }
     }
-  },
-  "defaultProject": "my-first-angular-project"
+  }
 }

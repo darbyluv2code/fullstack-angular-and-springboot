@@ -50,7 +50,7 @@
                             <div class="col-md-3 mt-2" style="text-align: right;">
                                 <span class="mr-2">Page Size</span>
 
-                                <select (change)="updatePageSize($event.target.value)">
+                                <select #myPageSelect (change)="updatePageSize(myPageSelect.value)">
                                     <option selected="true">5</option>
                                     <option>10</option>
                                     <option>20</option>

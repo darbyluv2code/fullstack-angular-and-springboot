@@ -6,7 +6,7 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { HttpClientModule } from '@angular/common/http';
 import { ProductService } from './services/product.service';
 
-import { Routes, RouterModule, Router} from '@angular/router';
+import { Routes, RouterModule} from '@angular/router';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -19,24 +19,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { LoginStatusComponent } from './components/login-status/login-status.component';
 
-import {
-  OKTA_CONFIG,
-  OktaAuthModule,
-  OktaCallbackComponent
-} from '@okta/okta-angular';
+import { OktaAuthModule, OktaCallbackComponent, OKTA_CONFIG } from '@okta/okta-angular';
+import { OktaAuth } from '@okta/okta-auth-js';
 
 import myAppConfig from './config/my-app-config';
 
-const oktaConfig = Object.assign({
-  onAuthRequired: (injector) => {
-    const router = injector.get(Router);
+const oktaConfig =  myAppConfig.oidc;
 
-    // Redirect the user to your custom login page
-    router.navigate(['/login']);
-  }
-}, myAppConfig.oidc);
+const oktaAuth = new OktaAuth(oktaConfig);
 
 const routes: Routes = [
+
   {path: 'login/callback', component: OktaCallbackComponent},
   {path: 'login', component: LoginComponent},
 
@@ -72,7 +65,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     OktaAuthModule
   ],
-  providers: [ProductService, { provide: OKTA_CONFIG, useValue: oktaConfig }],
+  providers: [ProductService, { provide: OKTA_CONFIG, useValue: {oktaAuth}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

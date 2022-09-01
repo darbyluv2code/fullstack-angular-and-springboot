@@ -4,9 +4,22 @@ In this guide, we will install the following development tools
 
 * Visual Studio Code
 * nvm
-* node
 * npm
+* node
 * tsc
+
+## Versions
+
+This course has been tested with the following software versions:
+
+* nvm 0.35.0
+* npm 7.24.0
+* node 16.10.0
+* tsc 4.6.4
+* Angular 14
+* Spring Boot 2.7.1 
+
+It is **highly recommended** that you use the versions listed above to make sure you do not encounter any issues with the course. If you choose to use other versions then the code may not work as expected.
 
 ## Prerequisites
 * git: You must have the git command-line tool installed. 
@@ -44,7 +57,7 @@ The website for nvm is: https://github.com/nvm-sh/nvm
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.0/install.sh | bash
     ```
 
-   The script clones the nvm repository to \~/.nvm and adds the source line to your profile (\~/.bash_profile, \~/.zshrc, \~/.profile, or \~/.bashrc).
+   The script clones the nvm repository to ~/.nvm and adds the source line to your profile (~/.bash_profile, ~/.zshrc, ~/.profile, or ~/.bashrc).
 
    You will see output similar to the following:
 
@@ -95,13 +108,13 @@ In this course, we'll use Node to run applications that we develop using TypeScr
    You will see the following output
 
     ```
-    Downloading and installing node v12.11.1...
-    Downloading https://nodejs.org/dist/v12.11.1/node-v12.11.1-darwin-x64.tar.gz...
+    Downloading and installing node v18.4.0...
+    Downloading https://nodejs.org/dist/v18.4.0/node-v18.4.0-...
     ######################################################################## 100.0%
     Computing checksum with shasum -a 256
     Checksums matched!
-    Now using node v12.11.1 (npm v6.11.3)
-    Creating default alias: default -> node (-> v12.11.1)
+    Now using node v18.4.0 (npm v8.12.1)
+    Creating default alias: default -> node (-> v18.4.0)
     ```
 
 2. Verify the node installation
@@ -126,26 +139,29 @@ In this course, we'll use Node to run applications that we develop using TypeScr
    >
    > In this example, node is similar to the Java JDK.  And npm is similar to Maven.
 
+## Switch Node Versions
+
+> Note: This course has been tested with Node 16.10. We will install this version.
+
+1. Install and use Node 16.10
+
+    ```bash
+    nvm install 16.10.0
+    nvm use 16.10.0
+    ```
 
 ## Install tsc
-tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaScript code. We can install the TypeScript compile using the Node Package Manager (npm)
+tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaScript code. We can install the TypeScript compiler using the Node Package Manager (npm)
 
-1. In you terminal window, enter the following command
+> Note: This course has been tested with TypeScript 4.6. We will install this version.
 
-    ```
-    npm install -g typescript
-    ```
-
-   The `-g` installs this as a global package. The TypeScript compiler will be available to all directories for this user.
-
-   You will see something similar to
+1. In your terminal window, enter the following command
 
     ```
-    /Users/luv2code/.nvm/versions/node/v12.11.1/bin/tsc -> /Users/luv2code/.nvm/versions/node/v12.11.1/lib/node_modules/typescript/bin/tsc
-    /Users/luv2code/.nvm/versions/node/v12.11.1/bin/tsserver -> /Users/luv2code/.nvm/versions/node/v12.11.1/lib/node_modules/typescript/bin/tsserver
-    + typescript@3.6.3
-    added 1 package from 1 contributor in 1.526s
+    npm install --location=global typescript@4.6.4
     ```
+
+   The `--location=global` installs this as a global package. The TypeScript compiler will be available to all directories for this user.
 
 2. You can verify the installation
 
@@ -158,4 +174,4 @@ tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaS
 That's it! You have successfully installed the development tools: Visual Studio Code, nvm, node, npm and tsc.
 
 ---
-&copy; 2021, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
+&copy; 2022, [luv2code LLC](http://www.luv2code.com) - All rights reserved.

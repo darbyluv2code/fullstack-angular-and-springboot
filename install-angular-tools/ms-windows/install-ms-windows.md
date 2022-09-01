@@ -7,6 +7,19 @@ In this guide, we will install the following development tools
 * npm
 * tsc
 
+## Versions
+
+This course has been tested with the following software versions:
+
+* nvm 0.35.0
+* npm 7.24.0
+* node 16.10.0
+* tsc 4.6.4
+* Angular 14
+* Spring Boot 2.7.1 
+
+It is **highly recommended** that you use the versions listed above to make sure you do not encounter any issues with the course. If you choose to use other versions then the code may not work as expected.
+
 ## Install Visual Studio Code
 Visual Studio Code is a general purpose IDE that support many programming languages. Visual Studio Code has built-in support for TypeScript.
 
@@ -23,7 +36,9 @@ Node is the the runtime environment for executing JavaScript code from the comma
 
 In this course, we'll use Node to run applications that we develop using TypeScript and Angular.
 
-1. In your web browser, visit https://nodejs.org/en/download/current/
+> Note: This course has been tested with Node 16.10. We will install this version.
+
+1. In your web browser, visit https://nodejs.org/download/release/v16.10.0/
 
 2. Select the **Windows Installer (.msi)** for your system (32-bit or 64-bit)
 
@@ -58,22 +73,15 @@ In this course, we'll use Node to run applications that we develop using TypeScr
 ## Install tsc
 tsc is the TypeScript compiler. We use tsc to compile TypeScript code into JavaScript code. We can install the TypeScript compile using the Node Package Manager (npm)
 
+> Note: This course has been tested with TypeScript 4.6. We will install this version.
+
 1. In your **Command Prompt** window, enter the following command
 
     ```
-    npm install -g typescript
+    npm install --location=global typescript@4.6.4
     ```
 
-   The "-g" installs this as a global package. The TypeScript compiler will be available to all directories for this user.
-
-   You will see something similar to
-
-    ```
-    C:\Users\luv2code\AppData\Roaming\npm\tsserver -> C:\Users\luv2code\AppData\Roaming\npm\node_modules\typescript\bin\tsserver
-    C:\Users\luv2code\AppData\Roaming\npm\tsc -> C:\Users\luv2code\AppData\Roaming\npm\node_modules\typescript\bin\tsc
-    + typescript@3.6.3
-    added 1 package from 1 contributor in 3.188s
-    ```
+   The "--location=global" installs this as a global package. The TypeScript compiler will be available to all directories for this user.
 
 2. You can verify the installation
 
@@ -124,4 +132,4 @@ That's it! You have successfully installed the development tools: Visual Studio 
     *This troubleshooting tip was contributed by **Chris**. Thanks Chris!!*
 
 ---
-&copy; 2021, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
+&copy; 2022, [luv2code LLC](http://www.luv2code.com) - All rights reserved.
