@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/common/product';
 import { ActivatedRoute } from '@angular/router';
-import { timeoutWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-list',
@@ -21,7 +20,7 @@ export class ProductListComponent implements OnInit {
   thePageSize: number = 5;
   theTotalElements: number = 0;
 
-  previousKeyword: string = null;
+  previousKeyword: string = "";
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute) { }
@@ -45,9 +44,10 @@ export class ProductListComponent implements OnInit {
 
   }
 
+
   handleSearchProducts() {
 
-    const theKeyword: string = this.route.snapshot.paramMap.get('keyword');
+    const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
 
     // if we have a different keyword than previous
     // then set thePageNumber to 1
@@ -74,7 +74,7 @@ export class ProductListComponent implements OnInit {
 
     if (hasCategoryId) {
       // get the "id" param string. convert string to a number using the "+" symbol
-      this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
+      this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
     }
     else {
       // not category id available ... default to category id 1
@@ -103,19 +103,18 @@ export class ProductListComponent implements OnInit {
                                                .subscribe(this.processResult());
   }
 
+  updatePageSize(pageSize: string) {
+    this.thePageSize = +pageSize;
+    this.thePageNumber = 1;
+    this.listProducts();
+  }
+
   processResult() {
-    return data => {
+    return (data: any) => {
       this.products = data._embedded.products;
       this.thePageNumber = data.page.number + 1;
       this.thePageSize = data.page.size;
       this.theTotalElements = data.page.totalElements;
     };
   }
-
-  updatePageSize(pageSize: number) {
-    this.thePageSize = pageSize;
-    this.thePageNumber = 1;
-    this.listProducts();
-  }
-
 }

@@ -18,7 +18,7 @@ import { Purchase } from 'src/app/common/purchase';
 })
 export class CheckoutComponent implements OnInit {
 
-  checkoutFormGroup: FormGroup;
+  checkoutFormGroup!: FormGroup;
 
   totalPrice: number = 0;
   totalQuantity: number = 0;
@@ -35,7 +35,8 @@ export class CheckoutComponent implements OnInit {
               private luv2ShopFormService: Luv2ShopFormService,
               private cartService: CartService,
               private checkoutService: CheckoutService,
-              private router: Router) { }
+              private router: Router) {
+               }
 
   ngOnInit(): void {
     
@@ -155,18 +156,18 @@ export class CheckoutComponent implements OnInit {
 
 
 
-  copyShippingAddressToBillingAddress(event) {
+  copyShippingAddressToBillingAddress(checked: boolean) {
 
-    if (event.target.checked) {
-      this.checkoutFormGroup.controls.billingAddress
-            .setValue(this.checkoutFormGroup.controls.shippingAddress.value);
+    if (checked) {
+      this.checkoutFormGroup.controls?.['billingAddress']
+            .setValue(this.checkoutFormGroup.controls?.['shippingAddress'].value);
 
       // bug fix for states
       this.billingAddressStates = this.shippingAddressStates;
 
     }
     else {
-      this.checkoutFormGroup.controls.billingAddress.reset();
+      this.checkoutFormGroup.controls?.['billingAddress'].reset();
 
       // bug fix for states
       this.billingAddressStates = [];
@@ -183,9 +184,7 @@ export class CheckoutComponent implements OnInit {
     }
 
     // set up order
-    let order = new Order();
-    order.totalPrice = this.totalPrice;
-    order.totalQuantity = this.totalQuantity;
+    let order = new Order(this.totalQuantity, this.totalPrice);
 
     // get cart items
     const cartItems = this.cartService.cartItems;
@@ -200,7 +199,7 @@ export class CheckoutComponent implements OnInit {
     */
 
     // - short way of doing the same thingy
-    let orderItems: OrderItem[] = cartItems.map(tempCartItem => new OrderItem(tempCartItem));
+    let orderItems: OrderItem[] = cartItems.map(tempCartItem => new OrderItem(tempCartItem.imageUrl!, tempCartItem.unitPrice!, tempCartItem.quantity, tempCartItem.id!));
 
     // set up purchase
     let purchase = new Purchase();
@@ -261,7 +260,7 @@ export class CheckoutComponent implements OnInit {
     const creditCardFormGroup = this.checkoutFormGroup.get('creditCard');
 
     const currentYear: number = new Date().getFullYear();
-    const selectedYear: number = Number(creditCardFormGroup.value.expirationYear);
+    const selectedYear: number = Number(creditCardFormGroup?.value.expirationYear);
 
     // if the current year equals the selected year, then start with the current month
 
@@ -286,8 +285,8 @@ export class CheckoutComponent implements OnInit {
 
     const formGroup = this.checkoutFormGroup.get(formGroupName);
 
-    const countryCode = formGroup.value.country.code;
-    const countryName = formGroup.value.country.name;
+    const countryCode = formGroup?.value.country.code;
+    const countryName = formGroup?.value.country.name;
 
     console.log(`${formGroupName} country code: ${countryCode}`);
     console.log(`${formGroupName} country name: ${countryName}`);
@@ -303,7 +302,7 @@ export class CheckoutComponent implements OnInit {
         }
 
         // select first item by default
-        formGroup.get('state').setValue(data[0]);
+        formGroup?.get('state')?.setValue(data[0]);
       }
     );
   }
