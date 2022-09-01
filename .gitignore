@@ -10,6 +10,9 @@ tmp/
 app/**/*.js
 app/**/*.js.map
 
+# Miscellaneous
+/.angular/cache
+
 # dependencies
 node_modules/
 bower_components/
