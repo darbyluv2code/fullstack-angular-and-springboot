@@ -11,9 +11,7 @@ describe('MembersPageComponent', () => {
       declarations: [ MembersPageComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(MembersPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
