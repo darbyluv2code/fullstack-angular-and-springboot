@@ -13,10 +13,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.logging.Logger;
+
 @RestController
 @RequestMapping("/api/checkout")
 public class CheckoutController {
 
+    private Logger logger = Logger.getLogger(getClass().getName());
+    
     private CheckoutService checkoutService;
 
     public CheckoutController(CheckoutService checkoutService) {
@@ -33,6 +37,8 @@ public class CheckoutController {
 
     @PostMapping("/payment-intent")
     public ResponseEntity<String> createPaymentIntent(@RequestBody PaymentInfo paymentInfo) throws StripeException {
+
+        logger.info("paymentInfo.amount: " + paymentInfo.getAmount());
 
         PaymentIntent paymentIntent = checkoutService.createPaymentIntent(paymentInfo);
 

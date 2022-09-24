@@ -20,7 +20,7 @@ import { PaymentInfo } from 'src/app/common/payment-info';
 })
 export class CheckoutComponent implements OnInit {
 
-  checkoutFormGroup: FormGroup;
+  checkoutFormGroup!: FormGroup;
 
   totalPrice: number = 0;
   totalQuantity: number = 0;
@@ -56,7 +56,7 @@ export class CheckoutComponent implements OnInit {
     this.reviewCartDetails();
 
     // read the user's email address from browser storage
-    const theEmail = JSON.parse(this.storage.getItem('userEmail'));
+    const theEmail = JSON.parse(this.storage.getItem('userEmail')!);
 
     this.checkoutFormGroup = this.formBuilder.group({
       customer: this.formBuilder.group({
@@ -151,7 +151,7 @@ export class CheckoutComponent implements OnInit {
     this.cardElement.mount('#card-element');
 
     // Add event binding for the 'change' event on the card element
-    this.cardElement.on('change', (event) => {
+    this.cardElement.on('change', (event: any) => {
 
       // get a handle to card-errors element
       this.displayError = document.getElementById('card-errors');
@@ -204,18 +204,18 @@ export class CheckoutComponent implements OnInit {
 
 
 
-  copyShippingAddressToBillingAddress(event) {
+  copyShippingAddressToBillingAddress(checked: boolean) {
 
-    if (event.target.checked) {
-      this.checkoutFormGroup.controls.billingAddress
-            .setValue(this.checkoutFormGroup.controls.shippingAddress.value);
+    if (checked) {
+      this.checkoutFormGroup.controls?.['billingAddress']
+            .setValue(this.checkoutFormGroup.controls?.['shippingAddress'].value);
 
       // bug fix for states
       this.billingAddressStates = this.shippingAddressStates;
 
     }
     else {
-      this.checkoutFormGroup.controls.billingAddress.reset();
+      this.checkoutFormGroup.controls?.['billingAddress'].reset();
 
       // bug fix for states
       this.billingAddressStates = [];
@@ -232,7 +232,7 @@ export class CheckoutComponent implements OnInit {
     }
 
     // set up order
-    let order = new Order();
+    let order = new Order(this.totalQuantity, this.totalPrice);
     order.totalPrice = this.totalPrice;
     order.totalQuantity = this.totalQuantity;
 
@@ -249,7 +249,7 @@ export class CheckoutComponent implements OnInit {
     */
 
     // - short way of doing the same thingy
-    let orderItems: OrderItem[] = cartItems.map(tempCartItem => new OrderItem(tempCartItem));
+    let orderItems: OrderItem[] = cartItems.map(tempCartItem => new OrderItem(tempCartItem.imageUrl!, tempCartItem.unitPrice!, tempCartItem.quantity, tempCartItem.id!));
 
     // set up purchase
     let purchase = new Purchase();
@@ -294,25 +294,25 @@ export class CheckoutComponent implements OnInit {
                 card: this.cardElement
               }
             }, { handleActions: false })
-          .then(function(result) {
+          .then((result: any) => {
             if (result.error) {
               // inform the customer there was an error
               alert(`There was an error: ${result.error.message}`);
             } else {
               // call REST API via the CheckoutService
               this.checkoutService.placeOrder(purchase).subscribe({
-                next: response => {
+                next: (response: any) => {
                   alert(`Your order has been received.\nOrder tracking number: ${response.orderTrackingNumber}`);
 
                   // reset cart
                   this.resetCart();
                 },
-                error: err => {
+                error: (err: any) => {
                   alert(`There was an error: ${err.message}`);
                 }
               })
             }            
-          }.bind(this));
+          });
         }
       );
     } else {
@@ -368,8 +368,8 @@ export class CheckoutComponent implements OnInit {
 
     const formGroup = this.checkoutFormGroup.get(formGroupName);
 
-    const countryCode = formGroup.value.country.code;
-    const countryName = formGroup.value.country.name;
+    const countryCode = formGroup?.value.country.code;
+    const countryName = formGroup?.value.country.name;
 
     console.log(`${formGroupName} country code: ${countryCode}`);
     console.log(`${formGroupName} country name: ${countryName}`);
@@ -385,7 +385,7 @@ export class CheckoutComponent implements OnInit {
         }
 
         // select first item by default
-        formGroup.get('state').setValue(data[0]);
+        formGroup?.get('state')?.setValue(data[0]);
       }
     );
   }
