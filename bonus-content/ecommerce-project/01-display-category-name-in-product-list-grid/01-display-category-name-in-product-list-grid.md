@@ -80,7 +80,7 @@ Edit the file: **product-list.component.ts**
 
 Add a new property
 ```ts
-      currentCategoryName: string;
+      currentCategoryName: string = "";
 ```
 
 This should appear in the area of defining the `currentCategoryId` property.
@@ -92,17 +92,17 @@ Replace
 ```ts
         if (hasCategoryId) {
           // get the "id" param string. convert string to a number using the "+" symbol
-          this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
+          this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
         }
 ```
 With
 ```ts
         if (hasCategoryId) {
           // get the "id" param string. convert string to a number using the "+" symbol
-          this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
+          this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
      
           // get the "name" param string
-          this.currentCategoryName = this.route.snapshot.paramMap.get('name');
+          this.currentCategoryName = this.route.snapshot.paramMap.get('name')!;
         }
 ```
 
@@ -142,9 +142,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductListComponent implements OnInit {
 
-  products: Product[];
-  currentCategoryId: number;
-  currentCategoryName: string;
+  products: Product[] = [];
+  currentCategoryId: number = 1;
+  currentCategoryName: string = "";
 
   constructor(private productService: ProductService,
               private route: ActivatedRoute) { }
@@ -162,10 +162,10 @@ export class ProductListComponent implements OnInit {
 
     if (hasCategoryId) {
       // get the "id" param string. convert string to a number using the "+" symbol
-      this.currentCategoryId = +this.route.snapshot.paramMap.get('id');
+      this.currentCategoryId = +this.route.snapshot.paramMap.get('id')!;
 
       // get the "name" param string
-      this.currentCategoryName = this.route.snapshot.paramMap.get('name');
+      this.currentCategoryName = this.route.snapshot.paramMap.get('name')!;
     }
     else {
       // not category id available ... default to category id 1
