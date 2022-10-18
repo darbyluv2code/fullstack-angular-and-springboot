@@ -56,20 +56,29 @@ The final code for [product-category-menu.component.html](code/product-category-
 
 
 ```html
-<div class="menu-sidebar-content js-scrollbar1">
-    <nav class="navbar-sidebar">
-        <ul class="list-unstyled navbar-list">
+<div class="main-content">
+    <div class="section-content section-content-p30">
 
-            <li *ngFor="let tempProductCategory of productCategories">
+        <h4>Category: {{ currentCategoryName }}</h4>
+        <hr>
 
-                <a routerLink="/category/{{ tempProductCategory.id }}/{{ tempProductCategory.categoryName }}" routerLinkActive="active-link">
-                  {{ tempProductCategory.categoryName }}
-                </a>
-                
-            </li>
+        <div class="container-fluid">
+            <div class="row">
 
-        </ul>
-    </nav>
+                <!-- loop over the collection of products -->
+                <div *ngFor="let tempProduct of products" class="col-md-3">
+
+                    <div class="product-box">
+                        <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
+                        <h1>{{ tempProduct.name }}</h1>
+                        <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
+                        <a href="#" class="primary-btn">Add to cart</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 ```
 
