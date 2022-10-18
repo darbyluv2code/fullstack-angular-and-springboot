@@ -56,29 +56,20 @@ The final code for [product-category-menu.component.html](code/product-category-
 
 
 ```html
-<div class="main-content">
-    <div class="section-content section-content-p30">
+<div class="menu-sidebar-content js-scrollbar1">
+    <nav class="navbar-sidebar">
+        <ul class="list-unstyled navbar-list">
 
-        <h4>Category: {{ currentCategoryName }}</h4>
-        <hr>
+            <li *ngFor="let tempProductCategory of productCategories">
 
-        <div class="container-fluid">
-            <div class="row">
+                <a routerLink="/category/{{ tempProductCategory.id }}/{{ tempProductCategory.categoryName }}" routerLinkActive="active-link">
+                  {{ tempProductCategory.categoryName }}
+                </a>
+                
+            </li>
 
-                <!-- loop over the collection of products -->
-                <div *ngFor="let tempProduct of products" class="col-md-3">
-
-                    <div class="product-box">
-                        <img src="{{ tempProduct.imageUrl }}" class="img-responsive">
-                        <h1>{{ tempProduct.name }}</h1>
-                        <div class="price">{{ tempProduct.unitPrice | currency:'USD' }}</div>
-                        <a href="#" class="primary-btn">Add to cart</a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+        </ul>
+    </nav>
 </div>
 ```
 
@@ -220,6 +211,7 @@ This displays the category name along with a horizontal rule `<hr>`.
 
 The final code for [product-list-grid.component.html](code/product-list-grid.component.html) should resemble the one below:
 
+```html
 <div class="main-content">
     <div class="section-content section-content-p30">
 
@@ -244,6 +236,7 @@ The final code for [product-list-grid.component.html](code/product-list-grid.com
         </div>
     </div>
 </div>
+```
 
 ---
 ## Verify the Results
