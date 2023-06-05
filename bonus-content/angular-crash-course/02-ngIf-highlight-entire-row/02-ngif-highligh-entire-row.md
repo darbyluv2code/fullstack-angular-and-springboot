@@ -65,7 +65,7 @@ The final code for [sales-person-list-bootstrap.component.html](code/sales-perso
 ```html
 <table class="table">
 
-    <thead class="thead-dark">
+    <thead class="table-dark">
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
