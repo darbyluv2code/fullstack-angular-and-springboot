@@ -24,8 +24,9 @@ In the CSS file for your component, you can create a local CSS style. This is se
 
 File: **sales-person-list.component.css**
 ```css
-    .highlight {
-      background-color:green
+    tr.highlight td {
+        background-color: green;
+        font-weight: bold;
     }
 ```
 

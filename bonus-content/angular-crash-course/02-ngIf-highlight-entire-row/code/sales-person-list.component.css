@@ -1,3 +1,4 @@
-.highlight {
-    background-color:green
+tr.highlight td {
+    background-color: green;
+    font-weight: bold;
 }
