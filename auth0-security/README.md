@@ -258,6 +258,7 @@ okta.oauth2.audience=http://localhost:8080
 2. Verify member and orders  
 3. Logout  
 
+---
 
 © luv2code LLC  
 [www.luv2code.com](http://www.luv2code.com)
