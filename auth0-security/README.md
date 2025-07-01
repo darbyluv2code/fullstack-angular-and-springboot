@@ -106,7 +106,7 @@ export default {
 Generate component:
 
 ```bash
-ng g component components/login-status
+ng generate component components/login-status
 ```
 
 **File: `login-status.component.ts`**
@@ -194,7 +194,7 @@ export class AppModule { }
 Generate service:
 
 ```bash
-ng g service services/auth-interceptor
+ng generate service services/auth-interceptor
 ```
 
 **File: `auth-interceptor.service.ts`**
