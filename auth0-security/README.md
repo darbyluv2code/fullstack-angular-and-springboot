@@ -1,7 +1,4 @@
-# Security Login/Logout  
-## Auth0 Integration Tutorial  
-
----
+# Security Login/Logout - Auth0 Integration Tutorial  
 
 ## Introduction
 
@@ -9,13 +6,9 @@ In this tutorial, you will learn how to integrate Auth0 into an eCommerce applic
 
 Users can sign up or log in (including social login).
 
----
-
 ## Prerequisites
 
 This tutorial assumes that you have already completed the section **“eCommerce Project – Checkout Form – Save the Order to Database”** in the *Full Stack Angular Spring Boot Tutorial* course.
-
----
 
 ## Overview of Steps
 
@@ -30,19 +23,17 @@ This tutorial assumes that you have already completed the section **“eCommerce
 9. Spring Boot – Backend Changes  
 10. Run the Application  
 
----
 
 ## 1. Create a Developer Account on Auth0
 
-**SIGN UP**  
+### SIGN UP
 1. Open: [https://developer.auth0.com/](https://developer.auth0.com/)  
 2. Sign up.
 
----
 
 ## 2. Create an Application on Auth0 and Provide App Information
 
-**CREATE APPLICATION**  
+### Create Application
 1. In Auth0 Developer Account, select `Applications > + Create Application`  
 2. Name: `My Angular App`  
 3. Choose `Single Page Applications`  
@@ -56,7 +47,13 @@ Add Application URIs:
 - **Allowed Web Origins**: `http://localhost:4200`  
 - **Allowed Origins (CORS)**: `http://localhost:4200`  
 
----
+![](images/create-app-01.png)
+
+![](images/create-app-02.png)
+
+![](images/create-app-03.png)
+
+Click *Save*
 
 ## 3. Create API
 
@@ -66,7 +63,9 @@ Add Application URIs:
 3. Identifier: `http://localhost:8080`  
 4. Click Create
 
----
+![](images/create-api-01.png)
+
+![](images/create-api-02.png)
 
 ## 4. Install Auth0 Dependencies
 
@@ -76,7 +75,6 @@ Add Application URIs:
 npm install @auth0/auth0-angular
 ```
 
----
 
 ## 5. Create/Update `my-app-config.ts`
 
@@ -99,7 +97,6 @@ export default {
 }
 ```
 
----
 
 ## 6. Add Login Status Component
 
@@ -152,8 +149,6 @@ export class LoginStatusComponent {
 }
 ```
 
----
-
 ## 7. Update `app.module.ts`
 
 Update `app.module.ts` with the following additions:
@@ -186,8 +181,6 @@ import { AuthInterceptorService } from './services/auth-interceptor.service';
 })
 export class AppModule { }
 ```
-
----
 
 ## 8. Add `auth-interceptor.service.ts`
 
@@ -237,7 +230,6 @@ export class AuthInterceptorService implements HttpInterceptor {
 }
 ```
 
----
 
 ## 9. Spring Boot – Backend Changes
 
@@ -250,7 +242,6 @@ okta.oauth2.client-id=<<UPDATE-WITH-YOUR-APP-CLIENT-ID>>
 okta.oauth2.audience=http://localhost:8080
 ```
 
----
 
 ## 10. Run the Application
 
