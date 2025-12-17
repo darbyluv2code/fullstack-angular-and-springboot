@@ -716,3 +716,4 @@ MigrationBackup/
 .history
 
 # End of https://www.gitignore.io/api/node,java,macos,maven,eclipse,angular,intellij,netbeans,visualstudio,visualstudiocode
+.claude/
