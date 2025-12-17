@@ -29,7 +29,6 @@ Temporary Items
 .apdisk
 *.icloud
 
-
 ########################################
 # Windows
 ########################################
@@ -42,7 +41,6 @@ $RECYCLE.BIN/
 *.stackdump
 *.lnk
 
-
 ########################################
 # Linux
 ########################################
@@ -54,7 +52,6 @@ $RECYCLE.BIN/
 *~
 *.tmp
 lost+found/
-
 
 ################################################################################
 # JAVA & BUILD ARTIFACTS
@@ -78,7 +75,6 @@ lost+found/
 hs_err_pid*
 replay_pid*
 
-
 ################################################################################
 # MAVEN
 ################################################################################
@@ -99,7 +95,6 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-
 ################################################################################
 # INTELLIJ IDEA
 ################################################################################
@@ -108,9 +103,7 @@ buildNumber.properties
 *.iml
 *.iws
 *.ipr
-
 out/
-
 
 ################################################################################
 # ECLIPSE
@@ -130,7 +123,6 @@ tmp/
 *.bak
 *.swp
 
-
 ################################################################################
 # VISUAL STUDIO CODE
 ################################################################################
@@ -139,13 +131,77 @@ tmp/
 .history/
 *.vsix
 
-
 ################################################################################
 # CLAUDE CODE
 ################################################################################
 
 .claude/
 
+################################################################################
+# NODE / JAVASCRIPT / TYPESCRIPT (Generic + Angular-safe)
+################################################################################
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports (Node)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Coverage / test output
+coverage/
+.nyc_output/
+
+# Common tool caches
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+.swc/
+.nuxt/
+dist-ssr/
+
+# Yarn Berry (PnP)
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Environment files (keep .env.example committed separately)
+.env
+.env.*
+!.env.example
+!.env.sample
+
+################################################################################
+# ANGULAR
+################################################################################
+
+# Angular CLI cache directory (Angular 13+)
+.angular/
+
+# Angular build artifacts
+dist/
+out-tsc/
 
 ################################################################################
 # GENERIC BUILD & TEMP
