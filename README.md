@@ -46,6 +46,7 @@ For full stack projects, you have the choice of either Angular or React. Pick th
 ### Java Web Test Automation
 Learn how to automate web browser testing using Java and test automation frameworks:
 1. [Java Playwright: Master Web Test Automation](https://www.luv2code.com/java-playwright-github)
+1. [Java Selenium: Master Web Test Automation](https://www.luv2code.com/java-selenium-github)
 
 &#8287;
 ## More luv2code Courses
